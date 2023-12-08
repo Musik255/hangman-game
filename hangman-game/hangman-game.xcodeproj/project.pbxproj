@@ -68,6 +68,7 @@
 		0CC191682B2368BE00A836B7 /* hangman-game */ = {
 			isa = PBXGroup;
 			children = (
+				0CC191772B2368BF00A836B7 /* Info.plist */,
 				0CC1918C2B23898B00A836B7 /* Files */,
 				0CC191892B23890A00A836B7 /* Struct */,
 				0CC1918A2B23892800A836B7 /* UI */,
@@ -88,7 +89,6 @@
 		0CC1918A2B23892800A836B7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				0CC1916D2B2368BE00A836B7 /* ViewController.swift */,
 				0CC1916B2B2368BE00A836B7 /* SceneDelegate.swift */,
 				0CC191692B2368BE00A836B7 /* AppDelegate.swift */,
 				0CC1916F2B2368BE00A836B7 /* Main.storyboard */,
@@ -102,7 +102,6 @@
 			children = (
 				0CC1917F2B23783400A836B7 /* Data.txt */,
 				0CC191722B2368BF00A836B7 /* Assets.xcassets */,
-				0CC191772B2368BF00A836B7 /* Info.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -113,6 +112,7 @@
 				0CC1917D2B2371FD00A836B7 /* Level.swift */,
 				0CC191812B23792400A836B7 /* Err.swift */,
 				0CC191872B23880700A836B7 /* FileHandler.swift */,
+				0CC1916D2B2368BE00A836B7 /* ViewController.swift */,
 			);
 			path = Files;
 			sourceTree = "<group>";

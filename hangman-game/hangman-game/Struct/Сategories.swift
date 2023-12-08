@@ -1,6 +1,6 @@
 import Foundation
 
-struct Categories{
-    var categoty = String()
-    var words = [Word]()
+struct Category{
+    var name = String()
+    var words = [String]()
 }

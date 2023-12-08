@@ -4,8 +4,8 @@ class FileHandler{
     let err = Err()
     var lines = [String]()
     
-    var categories = [Categories]()
-    
+    var categories = [Category]()
+    var category = Category()
     
 //    func getLines(){
 //        guard let fileURL = getFileURL() else{
@@ -18,6 +18,7 @@ class FileHandler{
 //        
 //        lines = getLines(content)
 //    }
+    
     
     
     private func getFileURL() -> URL?{
@@ -42,16 +43,24 @@ class FileHandler{
         return content.components(separatedBy: "\n")
     }
     
-    private func getCategories(_ lines : [String]) /*-> Categories*/{
+    func getCategories() -> [Category]{
         
+        let url = getFileURL()
         
+        let content = getContent(url!)
         
+        var lines = getLines(content!)
         
-        for (index, line) in lines.enumerated(){
-            let parts = line.components(separatedBy: ": ")
-            categories.append(parts[0])
-            let words = parts[1].components(separatedBy: ", ")
+        lines.remove(at: lines.count-1)
+        
+        for line in lines{
             
+            let parts = line.components(separatedBy: ": ")
+            print(line)
+            category.name = parts[0]
+            category.words = parts[1].components(separatedBy: ", ")
+            categories.append(category)
         }
+        return categories
     }
 }
