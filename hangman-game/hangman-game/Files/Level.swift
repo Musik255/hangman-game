@@ -1,6 +1,6 @@
 import Foundation
 
-final class Level{
+class Level{
     
     
     

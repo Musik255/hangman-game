@@ -7,20 +7,7 @@ class FileHandler{
     var categories = [Category]()
     var category = Category()
     
-//    func getLines(){
-//        guard let fileURL = getFileURL() else{
-//            return
-//        }
-//        
-//        guard let content = getContent(fileURL) else{
-//            return
-//        }
-//        
-//        lines = getLines(content)
-//    }
-    
-    
-    
+  
     private func getFileURL() -> URL?{
         guard let fileURL = Bundle.main.url(forResource: "Data", withExtension: "txt") else{
             err.showErr()
@@ -28,8 +15,6 @@ class FileHandler{
         }
         return fileURL
     }
-    
-    
     
     private func getContent(_ url : URL) -> String?{
         guard let content = try? String(contentsOf: url) else{

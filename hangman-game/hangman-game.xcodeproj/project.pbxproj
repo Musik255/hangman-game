@@ -16,7 +16,6 @@
 		0CC1917E2B2371FD00A836B7 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC1917D2B2371FD00A836B7 /* Level.swift */; };
 		0CC191802B23783400A836B7 /* Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0CC1917F2B23783400A836B7 /* Data.txt */; };
 		0CC191822B23792400A836B7 /* Err.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC191812B23792400A836B7 /* Err.swift */; };
-		0CC191842B237BB500A836B7 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC191832B237BB500A836B7 /* Words.swift */; };
 		0CC191862B23832E00A836B7 /* Сategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC191852B23832E00A836B7 /* Сategories.swift */; };
 		0CC191882B23880700A836B7 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC191872B23880700A836B7 /* FileHandler.swift */; };
 /* End PBXBuildFile section */
@@ -33,7 +32,6 @@
 		0CC1917D2B2371FD00A836B7 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		0CC1917F2B23783400A836B7 /* Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data.txt; sourceTree = "<group>"; };
 		0CC191812B23792400A836B7 /* Err.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Err.swift; sourceTree = "<group>"; };
-		0CC191832B237BB500A836B7 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		0CC191852B23832E00A836B7 /* Сategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Сategories.swift"; sourceTree = "<group>"; };
 		0CC191872B23880700A836B7 /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				0CC191852B23832E00A836B7 /* Сategories.swift */,
-				0CC191832B237BB500A836B7 /* Words.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -190,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CC191822B23792400A836B7 /* Err.swift in Sources */,
-				0CC191842B237BB500A836B7 /* Words.swift in Sources */,
 				0CC191882B23880700A836B7 /* FileHandler.swift in Sources */,
 				0CC191862B23832E00A836B7 /* Сategories.swift in Sources */,
 				0CC1916E2B2368BE00A836B7 /* ViewController.swift in Sources */,
