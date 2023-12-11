@@ -16,16 +16,19 @@ class ViewController: UIViewController {
     
     var keyButtons = [UIButton]()
     
+    var keyButtons1 = [UIButton]()
+//    var keyButtons2 = [UIButton]()
+//    var keyButtons3 = [UIButton]()
+    
+    var keyViews = [UIView]()
+    
     
     override func loadView() {
         
-        let letterButton = UIButton(type: .system)
+        
         
         view = UIView()
         view.backgroundColor = .lightGray
-        
-        
-        
         
         
         
@@ -35,9 +38,8 @@ class ViewController: UIViewController {
         //
         
         
-        
-        
         let keyboardView = UIView()
+        //        let prev = UIButton(type: .system)
         keyboardView.translatesAutoresizingMaskIntoConstraints = false
         keyboardView.backgroundColor = .cyan
         
@@ -45,51 +47,80 @@ class ViewController: UIViewController {
         view.addSubview(keyboardView)
         
         NSLayoutConstraint.activate([
-            keyboardView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            keyboardView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            keyboardView.heightAnchor.constraint(equalToConstant: 320),
-            keyboardView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor)
+            keyboardView.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor),
+            keyboardView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -10),
+            //            keyboardView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2),
+            keyboardView.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor)
         ])
-        //
-        //        categories = filehandler.getCategories()
         
-        //        for row in 0..<2{
-        //            for col in 0..<11{
+        var buttonLetter = UIButton(type: .system)
         
+        let oneButton = UIButton(type: .system)
+        oneButton.translatesAutoresizingMaskIntoConstraints = false
+        oneButton.backgroundColor = .black
+        keyButtons.append(oneButton)
         
+        keyboardView.addSubview(oneButton)
         
-        letterButton.backgroundColor = .black
-        letterButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        letterButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        letterButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
-        keyboardView.addSubview(letterButton)
-        letterButton.centerXAnchor.constraint(equalTo: keyboardView.centerXAnchor).isActive = true
-       
-        letterButton.centerYAnchor.constraint(equalTo: keyboardView.centerYAnchor).isActive = true
-        
+        NSLayoutConstraint.activate([
+            oneButton.widthAnchor.constraint(equalTo: keyboardView.widthAnchor, multiplier: 1/11, constant: -1),
+            oneButton.heightAnchor.constraint(equalTo: oneButton.widthAnchor, multiplier: 1.5),
+            oneButton.leadingAnchor.constraint(equalTo: keyboardView.leadingAnchor),
+            oneButton.topAnchor.constraint(equalTo: keyboardView.topAnchor),
+            keyboardView.heightAnchor.constraint(equalTo: oneButton.heightAnchor, multiplier: 3)
+        ])
         
         
-        
-        //                letterButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
-        //                letterButton.setTitle(String(row) + String(col), for: .normal)
-        //        letterButton.backgroundColor = .black
-        //        letterButton.layer.borderWidth = 1
-        
-        //        letterButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
-        //        letterButton.heightAnchor.constraint(equalToConstant: 10).isActive = true
-        
-        //
-        
-        
-        
-        //            }
-        //        }
-        
-        
-        
-        
+        for col in 0..<10{
+
+            //                categories = filehandler.getCategories()
+            
+            let letterButton = UIButton(type: .system)
+            keyboardView.addSubview(letterButton)
+            letterButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            letterButton.backgroundColor = .black
+//            letterButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+            
+            
+            letterButton.widthAnchor.constraint(equalTo: oneButton.widthAnchor).isActive = true
+            letterButton.heightAnchor.constraint(equalTo: oneButton.heightAnchor).isActive = true
+            letterButton.leftAnchor.constraint(equalTo: keyButtons[col].rightAnchor, constant: 1).isActive = true
+            
+            
+            letterButton.topAnchor.constraint(equalTo: keyboardView.topAnchor).isActive = true
+            
+            keyButtons.append(letterButton)
+            
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //            //
+            //            //                letterButton.setTitle(String(row) + String(col), for: .normal)
+            //            //        letterButton.backgroundColor = .black
+            //            //        letterButton.layer.borderWidth = 1
+            //
+            //            //        letterButton.widthAnchor.constraint(equalToConstant: 10).isActive = true
+            //            //        letterButton.heightAnchor.constraint(equalToConstant: 10).isActive = true
+            //
+            //            //
+            //
+            //
+            //
+            //            //            }
+            //        }
+            
+            
+            
+            
+            
+        }
         
     }
     override func viewDidLoad() {
